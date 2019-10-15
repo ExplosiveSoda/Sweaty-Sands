@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengeContainer } from '../shared/interfaces/challenge-container';
-import { SeasonX } from '../shared/data/season-x/season-x';
+import { Season1 } from '../shared/data/chapter-2/season-1/season-1';
 import { Other } from '../shared/data/Season-X/other';
 import { POI } from 'src/app/shared/data/poi';
 import * as L from 'leaflet';
@@ -12,7 +12,7 @@ import * as L from 'leaflet';
 })
 export class ContainerComponent implements OnInit {
   public sidenavToggle = false;
-  public challenges: ChallengeContainer[] = SeasonX;
+  public challenges: ChallengeContainer[] = Season1;
   public other: ChallengeContainer[] = Other;
 
   public pois = POI;
