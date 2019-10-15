@@ -1,0 +1,134 @@
+.sidenav {
+  height: 97vh;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #412c3e;
+  // background-color: #2c3441;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-right: 2px solid black;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 25px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 1.25px;
+	left: 1.25px;
+	width: 22.5px;
+	height: 22.5px;
+	background: #fff;
+	border-radius: 22.5px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #74da55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 1.25px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 32.5px;
+}
+
+// centering
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+input[type="checkbox"]
+{
+    vertical-align:middle;
+}
+
+label,input{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.list-group-item {
+  size: 40px;
+  color: rgba(255, 255, 255, 0.829);
+  font-weight: bold;
+  vertical-align: middle;
+  background-color: #573b52;
+  // background-color: #3d4758;
+}
+
+.btn {
+  // background-color: DodgerBlue;
+  // border: none;
+  // color: white;
+  // padding: 12px 16px;
+  // font-size: 16px;
+  // cursor: pointer;
+}
+
+span {
+  float: right;
+  vertical-align: middle;
+}
+
+.fa {
+  font-size: 30px;
+}
+
+.list-group-flush {
+  font-size: 14px;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.noHover {
+  cursor: default;
+}
