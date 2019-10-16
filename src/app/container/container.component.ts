@@ -42,9 +42,9 @@ export class ContainerComponent implements OnInit {
     this.map.on('click', function(ev: any) {
       this.tempWidth = ev.latlng.lat;
       this.tempHeight = ev.latlng.lng;
-      alert (
-          'width:' + this.tempWidth + '\n' + 'height:' + this.tempHeight + '\n'
-      );
+      // alert (
+      //     'width:' + this.tempWidth + '\n' + 'height:' + this.tempHeight + '\n'
+      // );
     });
     this.map.addControl(
       L.control.attribution({
