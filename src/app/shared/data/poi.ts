@@ -3,54 +3,54 @@ import { PoiLocations } from '../interfaces/poi-locations';
 export const POI: PoiLocations[] = [
     {
       name: 'Craggy Cliffs',
-      location: [17241, 11968]
+      location: [25868, 18092]
     },
     {
       name: 'Steamy Stacks',
-      location: [16080, 17136]
+      location: [24128, 25688]
     },
     {
       name: 'Pleasant Park',
-      location: [14848, 8800]
+      location: [22256, 13200]
     },
     {
       name: 'Sweaty Sands',
-      location: [12504, 4520]
+      location: [18944, 6640]
     },
     {
       name: 'Salty Springs',
-      location: [10984, 8216]
+      location: [16464, 12272]
     },
     {
       name: 'Frenzy Farm',
-      location: [12264, 13360]
+      location: [18624, 19904]
     },
     {
       name: 'Dirty Docks',
-      location: [11168, 18496]
+      location: [16784, 27648]
     },
     {
       name: 'Holly Hedges',
-      location: [9088, 4064]
+      location: [13615, 6080]
     },
     {
       name: 'Weeping Woods',
-      location: [7775, 7224]
+      location: [11503, 10736]
     },
     {
       name: 'Slurpy Swamp',
-      location: [5143, 6440]
+      location: [7743, 9504]
     },
     {
       name: 'Lazy Lake',
-      location: [6504, 14084]
+      location: [9503, 21152]
     },
     {
       name: 'Retail Row',
-      location: [7132, 17184]
+      location: [10655, 25744]
     },
     {
       name: 'Misty Meadows',
-      location: [3412, 11988]
+      location: [5103, 18000]
     }
 ];

@@ -17,6 +17,7 @@ export class MapComponent implements OnInit {
   public pois = POI;
   public tempWidth: number;
   public tempHeight: number;
+  public screenWidth: number;
 
   // public imageBounds = latLngBounds([[40.712216, -74.22655], [40.773941, -74.12544]]);
   // public imgOverlay = imageOverlay('../../../assets/images/1030.jpg', this.imageBounds);
@@ -48,16 +49,24 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     // this.makeMap();
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth < 1000) {
+      this.toggle();
+    }
   }
 
   toggle() {
+    if (this.screenWidth < 1000) {
+      document.getElementById('sidenav').style.width = '0';
+      document.getElementById('main').style.width = '100%';
+    }
     if (this.sidenavToggle === false) {
       document.getElementById('sidenav').style.width = '0';
       document.getElementById('main').style.width = '100%';
       this.sidenavToggle = true;
     } else {
-      document.getElementById('sidenav').style.width = '15%';
-      document.getElementById('main').style.width = '85%';
+      document.getElementById('sidenav').style.width = '20%';
+      document.getElementById('main').style.width = '80%';
       this.sidenavToggle = false;
     }
   }

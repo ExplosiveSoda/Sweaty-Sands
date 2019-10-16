@@ -31,12 +31,12 @@ export class ContainerComponent implements OnInit {
   makeMap() {
     this.map = L.map('leafletmap', {
       crs: L.CRS.Simple,
-      minZoom: -5,
+      minZoom: -6,
       maxZoom: -1,
       attributionControl: false,
       zoomControl: false
     });
-    const bounds = L.latLngBounds([[0, 0], [20000, 20000]]);
+    const bounds = L.latLngBounds([[0, 0], [30000, 30000]]);
     const image = L.imageOverlay('../../../assets/images/map.jpg', bounds).addTo(this.map);
     this.map.fitBounds(bounds);
     this.map.on('click', function(ev: any) {
@@ -101,7 +101,7 @@ export class ContainerComponent implements OnInit {
       mapPoi.addTo(this.map);
     });
 
-    this.map.setView( middle, -4);
+    this.map.setView( middle, -5);
     // below bounces image back to middle
     // map.setMaxBounds(map.getBounds());
 
