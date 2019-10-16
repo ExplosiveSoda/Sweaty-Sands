@@ -50,16 +50,17 @@ export class MapComponent implements OnInit {
   ngOnInit() {
     // this.makeMap();
     this.screenWidth = window.innerWidth;
-    if (this.screenWidth < 1000) {
-      this.toggle();
-    }
+    this.toggleByScreenSize();
   }
 
-  toggle() {
+  toggleByScreenSize() {
     if (this.screenWidth < 1000) {
       document.getElementById('sidenav').style.width = '0';
       document.getElementById('main').style.width = '100%';
     }
+  }
+
+  toggle() {
     if (this.sidenavToggle === false) {
       document.getElementById('sidenav').style.width = '0';
       document.getElementById('main').style.width = '100%';
