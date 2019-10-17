@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengeContainer } from '../shared/interfaces/challenge-container';
 import { Season1 } from '../shared/data/chapter-2/season-1/season-1';
-import { Other } from '../shared/data/Season-X/other';
+import { Other } from '../shared/data/chapter-2/season-1/other';
 import { POI } from 'src/app/shared/data/poi';
 import * as L from 'leaflet';
 

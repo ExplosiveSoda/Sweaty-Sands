@@ -161,4 +161,8 @@ export const Landmarks: PoiLocations[] = [
     name: 'Mount F8',
     location: [2687, 19040]
   },
+  {
+    name: 'Shipwreck Cove',
+    location: [4864, 27200]
+  }
 ];

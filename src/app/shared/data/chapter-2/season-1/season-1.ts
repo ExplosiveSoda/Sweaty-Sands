@@ -15,7 +15,7 @@ export const Season1: ChallengeContainer[] = [
         description: 'Discover 10 Named Locations',
         locations: POI,
         icon: {
-          image: '../../../assets/icons/icon.png',
+          image: '../../../assets/icons/102.png',
           size: [40, 40],
           anchor: [20, 40]
         },
@@ -35,7 +35,7 @@ export const Season1: ChallengeContainer[] = [
           }
         ],
         icon: {
-          image: '../../../assets/icons/skull.png',
+          image: '../../../assets/icons/18.png',
           size: [40, 40],
           anchor: [20, 20]
         },
@@ -46,7 +46,7 @@ export const Season1: ChallengeContainer[] = [
         description: 'Discover 10 Landmarks',
         locations: Landmarks,
         icon: {
-          image: '../../../assets/icons/landmark.png',
+          image: '../../../assets/icons/141.png',
           size: [40, 40],
           anchor: [20, 20]
         },
@@ -62,7 +62,7 @@ export const Season1: ChallengeContainer[] = [
           }
         ],
         icon: {
-          image: '../../../assets/icons/landmark.png',
+          image: '../../../assets/icons/101.png',
           size: [40, 40],
           anchor: [20, 20]
         },
@@ -71,17 +71,8 @@ export const Season1: ChallengeContainer[] = [
       {
         id: 1004,
         description: 'Deal 500 damage with Assault Rifles to opponents',
-        locations: [
-          {
-            name: 'Deal 500 damage with Assault Rifles to opponents',
-            location: [0, 0]
-          }
-        ],
-        icon: {
-          image: '../../../assets/icons/landmark.png',
-          size: [40, 40],
-          anchor: [20, 20]
-        },
+        locations: null,
+        icon: null,
         isChecked: false
       },
       {
@@ -94,7 +85,7 @@ export const Season1: ChallengeContainer[] = [
           }
         ],
         icon: {
-          image: '../../../assets/icons/landmark.png',
+          image: '../../../assets/icons/2.png',
           size: [40, 40],
           anchor: [20, 20]
         },
@@ -103,33 +94,15 @@ export const Season1: ChallengeContainer[] = [
       {
         id: 1006,
         description: 'Catch a weapon using a fishing rod',
-        locations: [
-          {
-            name: 'Catch a weapon using a fishing rod',
-            location: [0, 0]
-          }
-        ],
-        icon: {
-          image: '../../../assets/icons/landmark.png',
-          size: [40, 40],
-          anchor: [20, 20]
-        },
+        locations: null,
+        icon: null,
         isChecked: false
       },
       {
         id: 1007,
         description: 'Deal damage with SMGs, Shotguns, and Pistols in a single match 3 times',
-        locations: [
-          {
-            name: 'Deal damage with SMGs, Shotguns, and Pistols in a single match 3 times',
-            location: [0, 0]
-          }
-        ],
-        icon: {
-          image: '../../../assets/icons/landmark.png',
-          size: [40, 40],
-          anchor: [20, 20]
-        },
+        locations: null,
+        icon: null,
         isChecked: false
       },
       {
@@ -149,7 +122,7 @@ export const Season1: ChallengeContainer[] = [
           }
         ],
         icon: {
-          image: '../../../assets/icons/landmark.png',
+          image: '../../../assets/icons/101.png',
           size: [40, 40],
           anchor: [20, 20]
         },
