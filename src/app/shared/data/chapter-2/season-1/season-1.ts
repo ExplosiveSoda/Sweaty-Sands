@@ -118,11 +118,11 @@ export const Season1: ChallengeContainer[] = [
         locations: [
           {
             name: `Search hidden 'F' found in the New World Loading Screen`,
-            location: [0, 0]
+            location: [9804, 22398]
           }
         ],
         icon: {
-          image: '../../../assets/icons/101.png',
+          image: '../../../assets/icons/141.png',
           size: [40, 40],
           anchor: [20, 20]
         },
