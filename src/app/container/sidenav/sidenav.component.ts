@@ -89,6 +89,17 @@ export class SidenavComponent implements OnInit {
 
     } else if (item.challenges.find(e => e.isChecked === true)) {
       item.isChecked = true;
+      const checkedChallenge = item.challenges.find(e => e.isChecked === true);
+      checkedChallenge.locations.forEach(location => {
+        const iconConst = L.icon({
+          iconUrl: checkedChallenge.icon,
+          iconSize: [40, 40],
+          iconAnchor: [20, 40]
+        });
+        this.markers[location.name] = L.marker(location.location, {
+          icon: iconConst
+        }).addTo(this.map);
+      });
     } else {
       item.isChecked = false;
       this.other.forEach(challengeContainer => {

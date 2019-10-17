@@ -43,3 +43,6 @@ html, body {
 // .leaflet-bar a:hover {
 //   background-color: #bada55;
 // }
+.leaflet-container img.leaflet-image-layer{
+  max-width: 30000px !important;
+  }
