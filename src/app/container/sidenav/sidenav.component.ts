@@ -55,14 +55,20 @@ export class SidenavComponent implements OnInit {
       week.isChecked = true;
       week.challenges.forEach(e => {
         e.isChecked = true;
-        this.addLocationIcons(e, week);
+        if (e.locations !== null) {
+          this.addLocationIcons(e, week);
+        }
       });
     } else {
       week.challenges.forEach(e => {
-        week.isChecked = false;
-        e.isChecked = false;
-        this.removeLocationIcons(e, week);
+        if (e.isChecked === true) {
+          e.isChecked = false;
+          if (e.locations !== null) {
+            this.removeLocationIcons(e, week);
+          }
+        }
       });
+      week.isChecked = false;
     }
   }
 
@@ -76,12 +82,12 @@ export class SidenavComponent implements OnInit {
       item.isChecked = true;
       this.addLocationIcons(challenge, item);
     } else {
+      challenge.isChecked = false;
       if (item.challenges.find(e => e.isChecked === true)) {
         item.isChecked = true;
       } else {
         item.isChecked = false;
       }
-      challenge.isChecked = false;
       this.removeLocationIcons(challenge, item);
     }
   }

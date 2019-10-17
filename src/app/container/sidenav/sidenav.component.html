@@ -30,9 +30,9 @@
       <ul class="list-group list-group-flush noHover" *ngFor="let challenges of item.challenges"
         [collapse]="item.isCollapsed" (click)="$event.stopPropagation()">
         <li class="list-group-item">
-          <input type="checkbox" id="{{challenges.id}}" [checked]="challenges.isChecked"
+          <input type="checkbox" id="{{challenges.id}}-{{challenges.description}}" [checked]="challenges.isChecked"
             (change)="challenges.isChecked = !challenges.isChecked; updateWeekCheck(challenges, item, $event)" /><label
-            for="{{challenges.id}}">Toggle</label> {{ challenges.description }}
+            for="{{challenges.id}}-{{challenges.description}}">Toggle</label> {{ challenges.description }}
         </li>
       </ul>
     </li>
