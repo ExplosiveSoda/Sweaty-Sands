@@ -13,7 +13,11 @@ export const Season1: ChallengeContainer[] = [
         id: 1000,
         description: 'Discover Named Locations',
         locations: POI,
-        icon: '../../../assets/icons/icon.png',
+        icon: {
+          image: '../../../assets/icons/icon.png',
+          size: [40, 40],
+          anchor: [20, 40]
+        },
         isChecked: false
       },
       {
@@ -21,11 +25,19 @@ export const Season1: ChallengeContainer[] = [
         description: 'Eliminations at Lazy Lake or Misty Meadows',
         locations: [
           {
-            name: 'testing1',
-            location: [10008, 6986]
+            name: 'Lazy Lake Eliminations',
+            location: [9503, 21152]
+          },
+          {
+            name: 'Misty Meadows Eliminations',
+            location: [5103, 18000]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/skull.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -37,7 +49,11 @@ export const Season1: ChallengeContainer[] = [
             location: [5000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/icon.png',
+          size: [40, 40],
+          anchor: [20, 40]
+        },
         isChecked: false
       }
     ]

@@ -24,7 +24,11 @@ export const Other: ChallengeContainer[] = [
                     location: [11915, 4502]
                   }
                 ],
-                icon: '../../../assets/icons/hoverboard.png',
+                icon: {
+                  image: '../../../assets/icons/hoverboard.png',
+                  size: [40, 40],
+                  anchor: [20, 20]
+                },
                 isChecked: false
             }
         ]

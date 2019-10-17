@@ -25,7 +25,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [19000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -37,7 +41,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [10008, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -49,7 +57,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [5000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       }
     ]
@@ -77,7 +89,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [19000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -89,7 +105,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [10008, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -101,7 +121,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [5000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       }
     ]
@@ -129,7 +153,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [19000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -141,7 +169,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [10008, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       },
       {
@@ -153,7 +185,11 @@ export const SeasonX: ChallengeContainer[] = [
             location: [5000, 6986]
           }
         ],
-        icon: 'iamge',
+        icon: {
+          image: '../../../assets/icons/hoverboard.png',
+          size: [40, 40],
+          anchor: [20, 20]
+        },
         isChecked: false
       }
     ]

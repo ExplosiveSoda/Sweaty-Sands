@@ -19,13 +19,13 @@ export class SidenavComponent implements OnInit {
   public markers = {};
   events = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     // this.toggle();
   }
 
-  test(item: any) {
+  collapse(item: any) {
     item.isCollapsed = !item.isCollapsed;
   }
 
@@ -55,60 +55,53 @@ export class SidenavComponent implements OnInit {
       week.isChecked = true;
       week.challenges.forEach(e => {
         e.isChecked = true;
+        this.addLocationIcons(e, week);
       });
     } else {
       week.challenges.forEach(e => {
         week.isChecked = false;
         e.isChecked = false;
+        this.removeLocationIcons(e, week);
       });
     }
   }
 
-  updateWeekCheck(item: ChallengeContainer, event: any) {
+  updateWeekCheck(challenge: Challenge, item: ChallengeContainer, event: any) {
     if (event.currentTarget.checked === true) {
+      challenge.isChecked = true;
       item.isChecked = true;
-
-      this.other.forEach(challengeContainer => {
-      if (challengeContainer.isChecked === true) {
-        challengeContainer.challenges.forEach(i => {
-          if (i.isChecked === true) {
-            i.locations.forEach(location => {
-              const iconConst = L.icon({
-                iconUrl: i.icon,
-                iconSize: [40, 40],
-                iconAnchor: [20, 20]
-              });
-              this.markers[location.name] = L.marker(location.location, {
-                icon: iconConst
-              }).addTo(this.map);
-            });
-          }
-        });
-      }
-    });
-
-    } else if (item.challenges.find(e => e.isChecked === true)) {
+      this.addLocationIcons(challenge, item);
+    } else if (challenge.isChecked === true) {
+      challenge.isChecked = true;
       item.isChecked = true;
-      const checkedChallenge = item.challenges.find(e => e.isChecked === true);
-      checkedChallenge.locations.forEach(location => {
-        const iconConst = L.icon({
-          iconUrl: checkedChallenge.icon,
-          iconSize: [40, 40],
-          iconAnchor: [20, 40]
-        });
-        this.markers[location.name] = L.marker(location.location, {
-          icon: iconConst
-        }).addTo(this.map);
-      });
+      this.addLocationIcons(challenge, item);
     } else {
-      item.isChecked = false;
-      this.other.forEach(challengeContainer => {
-        challengeContainer.challenges.forEach(i => {
-          i.locations.forEach(location => {
-            this.map.removeLayer(this.markers[location.name]);
-          });
-        });
-      });
+      if (item.challenges.find(e => e.isChecked === true)) {
+        item.isChecked = true;
+      } else {
+        item.isChecked = false;
+      }
+      challenge.isChecked = false;
+      this.removeLocationIcons(challenge, item);
     }
+  }
+
+  addLocationIcons(challenge: Challenge, item: ChallengeContainer) {
+    challenge.locations.forEach(location => {
+      const iconConst = L.icon({
+        iconUrl: challenge.icon.image,
+        iconSize: challenge.icon.size,
+        iconAnchor: challenge.icon.anchor
+      });
+      this.markers[location.name] = L.marker(location.location, {
+        icon: iconConst
+      }).addTo(this.map);
+    });
+  }
+
+  removeLocationIcons(challenge: Challenge, item: ChallengeContainer) {
+    challenge.locations.forEach(location => {
+      this.map.removeLayer(this.markers[location.name]);
+    });
   }
 }
