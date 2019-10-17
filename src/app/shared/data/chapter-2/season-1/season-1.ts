@@ -1,6 +1,7 @@
 import { LatLngExpression } from 'leaflet';
 import { ChallengeContainer } from '../../../interfaces/challenge-container';
 import { POI } from 'src/app/shared/data/poi';
+import { Landmarks } from 'src/app/shared/data/chapter-2/season-1/landmarks';
 
 export const Season1: ChallengeContainer[] = [
   {
@@ -43,16 +44,11 @@ export const Season1: ChallengeContainer[] = [
       {
         id: 1002,
         description: 'Discover Landmarks',
-        locations: [
-          {
-            name: 'testing2',
-            location: [5000, 6986]
-          }
-        ],
+        locations: Landmarks,
         icon: {
-          image: '../../../assets/icons/icon.png',
+          image: '../../../assets/icons/landmark.png',
           size: [40, 40],
-          anchor: [20, 40]
+          anchor: [20, 20]
         },
         isChecked: false
       }
