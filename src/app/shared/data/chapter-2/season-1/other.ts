@@ -1,5 +1,6 @@
 import { ChallengeContainer } from '../../../interfaces/challenge-container';
 import { Workbench } from 'src/app/shared/data/chapter-2/season-1/workbench';
+import { Motorboats } from 'src/app/shared/data/chapter-2/season-1/motorboats';
 
 export const Other: ChallengeContainer[] = [
   {
@@ -33,11 +34,11 @@ export const Other: ChallengeContainer[] = [
       {
         id: 1002,
         description: 'Motorboats',
-        locations: null,
+        locations: Motorboats,
         icon: {
-          image: '../../../assets/icons/102.png',
+          image: '../../../assets/icons/Motorboat.png',
           size: [40, 40],
-          anchor: [20, 40]
+          anchor: [20, 20]
         },
         isChecked: false
       },
@@ -46,9 +47,9 @@ export const Other: ChallengeContainer[] = [
         description: 'Weapon Upgrade Benches',
         locations: Workbench,
         icon: {
-          image: '../../../assets/icons/102.png',
-          size: [40, 40],
-          anchor: [20, 40]
+          image: '../../../assets/icons/upgrademachine.png',
+          size: [60, 60],
+          anchor: [30, 30]
         },
         isChecked: false
       },
