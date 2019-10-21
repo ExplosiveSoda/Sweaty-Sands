@@ -8,6 +8,7 @@ export const Other: ChallengeContainer[] = [
     title: 'Spawns',
     isCollapsed: true,
     isChecked: false,
+    isActive: true,
     challenges: [
       {
         id: 1000,
@@ -18,7 +19,8 @@ export const Other: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 40]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: false
       },
       {
         id: 1001,
@@ -29,7 +31,8 @@ export const Other: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 40]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: false
       },
       {
         id: 1002,
@@ -37,10 +40,11 @@ export const Other: ChallengeContainer[] = [
         locations: Motorboats,
         icon: {
           image: '../../../assets/icons/Motorboat.png',
-          size: [40, 40],
-          anchor: [20, 20]
+          size: [60, 60],
+          anchor: [30, 30]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1003,
@@ -51,7 +55,8 @@ export const Other: ChallengeContainer[] = [
           size: [60, 60],
           anchor: [30, 30]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1004,
@@ -62,7 +67,8 @@ export const Other: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 40]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: false
       },
       {
         id: 1005,
@@ -73,7 +79,8 @@ export const Other: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 40]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: false
       }
     ]
   }

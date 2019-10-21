@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChallengeContainer } from '../shared/interfaces/challenge-container';
 import { Season1 } from '../shared/data/chapter-2/season-1/season-1';
 import { Other } from '../shared/data/chapter-2/season-1/other';
-import { POI } from 'src/app/shared/data/poi';
+import { POI } from 'src/app/shared/data/chapter-2/poi';
 import * as L from 'leaflet';
 
 @Component({
@@ -42,9 +42,9 @@ export class ContainerComponent implements OnInit {
     this.map.on('click', function(ev: any) {
       this.tempWidth = ev.latlng.lat;
       this.tempHeight = ev.latlng.lng;
-      // alert (
-      //     'width:' + this.tempWidth + '\n' + 'height:' + this.tempHeight + '\n'
-      // );
+      alert (
+          'width:' + this.tempWidth + '\n' + 'height:' + this.tempHeight + '\n'
+      );
     });
     this.map.addControl(
       L.control.attribution({

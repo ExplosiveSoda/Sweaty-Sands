@@ -1,4 +1,4 @@
-import { PoiLocations } from '../interfaces/poi-locations';
+import { PoiLocations } from '../../interfaces/poi-locations';
 
 export const POI: PoiLocations[] = [
     {

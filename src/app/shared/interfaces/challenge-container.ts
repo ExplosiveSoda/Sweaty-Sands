@@ -5,5 +5,6 @@ export interface ChallengeContainer {
   title: string;
   isCollapsed: boolean;
   isChecked: boolean;
+  isActive: boolean;
   challenges: Challenge[];
 }

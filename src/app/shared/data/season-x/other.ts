@@ -6,6 +6,7 @@ export const Other: ChallengeContainer[] = [
         title: 'Spawns',
         isCollapsed: true,
         isChecked: false,
+        isActive: true,
         challenges: [
             {
                 id: 1000,
@@ -29,7 +30,8 @@ export const Other: ChallengeContainer[] = [
                   size: [40, 40],
                   anchor: [20, 20]
                 },
-                isChecked: false
+                isChecked: false,
+                isActive: true
             }
         ]
     }

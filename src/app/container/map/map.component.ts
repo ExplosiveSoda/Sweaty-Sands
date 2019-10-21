@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as L from 'leaflet';
 import { Title } from '@angular/platform-browser';
-import { POI } from 'src/app/shared/data/poi';
+import { POI } from 'src/app/shared/data/chapter-2/poi';
 import { ChallengeContainer } from 'src/app/shared/interfaces/challenge-container';
 // import { latLng, tileLayer, imageOverlay, latLngBounds } from 'leaflet';
 

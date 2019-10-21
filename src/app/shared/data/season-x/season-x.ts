@@ -7,6 +7,7 @@ export const SeasonX: ChallengeContainer[] = [
     title: 'Week 1',
     isCollapsed: true,
     isChecked: false,
+    isActive: true,
     challenges: [
       {
         id: 1000,
@@ -30,7 +31,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1001,
@@ -46,7 +48,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1002,
@@ -62,7 +65,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       }
     ]
   },
@@ -71,6 +75,7 @@ export const SeasonX: ChallengeContainer[] = [
     title: 'Week 2',
     isCollapsed: true,
     isChecked: false,
+    isActive: true,
     challenges: [
       {
         id: 1003,
@@ -94,7 +99,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1004,
@@ -110,7 +116,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1005,
@@ -126,7 +133,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       }
     ]
   },
@@ -135,6 +143,7 @@ export const SeasonX: ChallengeContainer[] = [
     title: 'Week 3',
     isCollapsed: true,
     isChecked: false,
+    isActive: true,
     challenges: [
       {
         id: 1006,
@@ -158,7 +167,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1007,
@@ -174,7 +184,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       },
       {
         id: 1008,
@@ -190,7 +201,8 @@ export const SeasonX: ChallengeContainer[] = [
           size: [40, 40],
           anchor: [20, 20]
         },
-        isChecked: false
+        isChecked: false,
+        isActive: true
       }
     ]
   }

@@ -8,4 +8,5 @@ export interface Challenge {
   locations: ChallengeLocation[];
   icon: Icon;
   isChecked: boolean;
+  isActive: boolean;
 }

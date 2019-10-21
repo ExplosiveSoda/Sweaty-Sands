@@ -99,7 +99,7 @@ export class SidenavComponent implements OnInit {
         iconSize: challenge.icon.size,
         iconAnchor: challenge.icon.anchor
       });
-      this.markers[location.name] = L.marker(location.location, {
+      this.markers[challenge.id + '-' + location.name] = L.marker(location.location, {
         icon: iconConst
       }).addTo(this.map);
     });
@@ -107,7 +107,7 @@ export class SidenavComponent implements OnInit {
 
   removeLocationIcons(challenge: Challenge, item: ChallengeContainer) {
     challenge.locations.forEach(location => {
-      this.map.removeLayer(this.markers[location.name]);
+      this.map.removeLayer(this.markers[challenge.id + '-' + location.name]);
     });
   }
 }
