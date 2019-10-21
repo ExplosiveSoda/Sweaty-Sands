@@ -1,3 +1,130 @@
-<div class="body">
+<div class="body" [formGroup]="form">
+    <div class="card-body">
+        <h1>Support <span>SweatySands.com</span></h1>
+        <div class="donate-box">
+          <div class="donate-middle">
+              <input class="donate-name-input" type="text" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="Your EPIC Name">
+              <input class="donate-link-input" type="text" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="Link to your Twitch, Youtube, etc. (optional)">
+              <div class="donate-price">
+                  <input class="donate-price-input" data-currency="USD" type="text" inputmode="numeric" pattern="[0-9]*" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="1.00" value="1.00">
+                  <div class="donate-min">
+                    <a onclick="minDonation()">Min. donation is $ 1.00</a>
+                  </div>
+                  <div>
 
+                  </div>
+                  <div class="currency-symbol" onclick="toggleCurrencyDropdown()">
+                    $
+                  </div>
+                  <div class="currency-label" onclick="toggleCurrencyDropdown()">
+                    <span>USD</span>
+                    <svg width="11" height="11" viewBox="0 0 24 24">
+                      <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"></path>
+                    </svg>
+                  </div>
+                  <!-- <select formControlName="currency" class="custom-select form-control">
+                      <option *ngFor="let item of currencies">
+                        {{ item }}
+                      </option>
+                    </select> -->
+                  <div class="currency-dropdown">
+                      <a onclick="selectCurrency('AUD')">AUD</a>
+                      <a onclick="selectCurrency('BRL')">BRL</a>
+                      <a onclick="selectCurrency('CAD')">CAD</a>
+                      <a onclick="selectCurrency('CHF')">CHF</a>
+                      <a onclick="selectCurrency('CZK')">CZK</a>
+                      <a onclick="selectCurrency('DKK')">DKK</a>
+                      <a onclick="selectCurrency('EUR')">EUR</a>
+                      <a onclick="selectCurrency('GBP')">GBP</a>
+                      <a onclick="selectCurrency('HKD')">HKD</a>
+                      <a onclick="selectCurrency('HUF')">HUF</a>
+                      <a onclick="selectCurrency('ILS')">ILS</a>
+                      <a onclick="selectCurrency('INR')">INR</a>
+                      <a onclick="selectCurrency('JPY')">JPY</a>
+                      <a onclick="selectCurrency('MXN')">MXN</a>
+                      <a onclick="selectCurrency('MYR')">MYR</a>
+                      <a onclick="selectCurrency('NOK')">NOK</a>
+                      <a onclick="selectCurrency('NZD')">NZD</a>
+                      <a onclick="selectCurrency('PHP')">PHP</a>
+                      <a onclick="selectCurrency('PLN')">PLN</a>
+                      <a onclick="selectCurrency('RUB')">RUB</a>
+                      <a onclick="selectCurrency('SEK')">SEK</a>
+                      <a onclick="selectCurrency('SGD')">SGD</a>
+                      <a onclick="selectCurrency('THB')">THB</a>
+                      <a onclick="selectCurrency('TRY')">TRY</a>
+                      <a onclick="selectCurrency('USD')">USD</a>
+                    </div>
+              </div>
+              <div>
+                <label>
+                  <input class="donate-public-input" type="checkbox" checked=""> Show my donation on this site.
+                </label>
+              </div>
+              <button class="btn">Pay with PayPal</button>
+          </div>
+        </div>
+    </div>
 </div>
+
+
+<!-- <div class="body">
+		<h1>Support LootLake.info<br>and Win a skin every week</h1>
+		<p>Your donation will help me cover the site's operational expenses.</p>
+		<p>You are entering a Fortnite skin giveaway with each donation.</p>
+		<p>I am truly grateful for donations of any amount. Thank you!</p>
+		<div class="donate-box">
+			<div class="donate-left">
+				<input class="donate-name-input" type="text" autocorrect="off" spellcheck="false" autocomplete="off"
+					placeholder="Your EPIC Name">
+				<input class="donate-link-input" type="text" autocorrect="off" spellcheck="false" autocomplete="off"
+					placeholder="Link to your Twitch, Youtube, etc. (optional)">
+				<div class="donate-price">
+					<input class="donate-price-input" data-currency="USD" type="text" inputmode="numeric"
+						pattern="[0-9]*" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="1.00"
+						value="1.00">
+					<div class="donate-min"><a onclick="minDonation()">Min. donation is $ 1.00</a></div>
+					<div class="currency-symbol" onclick="toggleCurrencyDropdown()">$</div>
+					<div class="currency-label" onclick="toggleCurrencyDropdown()"><span>USD</span> <svg width="11"
+							height="11" viewBox="0 0 24 24">
+							<path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" /></svg></div>
+					<div class="currency-dropdown">
+						<a onclick="selectCurrency('AUD')">AUD</a>
+						<a onclick="selectCurrency('BRL')">BRL</a>
+						<a onclick="selectCurrency('CAD')">CAD</a>
+						<a onclick="selectCurrency('CHF')">CHF</a>
+						<a onclick="selectCurrency('CZK')">CZK</a>
+						<a onclick="selectCurrency('DKK')">DKK</a>
+						<a onclick="selectCurrency('EUR')">EUR</a>
+						<a onclick="selectCurrency('GBP')">GBP</a>
+						<a onclick="selectCurrency('HKD')">HKD</a>
+						<a onclick="selectCurrency('HUF')">HUF</a>
+						<a onclick="selectCurrency('ILS')">ILS</a>
+						<a onclick="selectCurrency('INR')">INR</a>
+						<a onclick="selectCurrency('JPY')">JPY</a>
+						<a onclick="selectCurrency('MXN')">MXN</a>
+						<a onclick="selectCurrency('MYR')">MYR</a>
+						<a onclick="selectCurrency('NOK')">NOK</a>
+						<a onclick="selectCurrency('NZD')">NZD</a>
+						<a onclick="selectCurrency('PHP')">PHP</a>
+						<a onclick="selectCurrency('PLN')">PLN</a>
+						<a onclick="selectCurrency('RUB')">RUB</a>
+						<a onclick="selectCurrency('SEK')">SEK</a>
+						<a onclick="selectCurrency('SGD')">SGD</a>
+						<a onclick="selectCurrency('THB')">THB</a>
+						<a onclick="selectCurrency('TRY')">TRY</a>
+						<a onclick="selectCurrency('USD')">USD</a>
+					</div>
+				</div>
+				<div><label><input class="donate-public-input" type="checkbox" checked> Show my donation on this
+						site.</label></div>
+				<div id="paypal-buttons"></div>
+			</div>
+			<div class="donate-right">
+				<div class="leaderboard-tabs">
+					<a class="tab tab-this-week selected" onclick="selectLeaderboard('this-week')">THIS WEEK</a>
+					<a class="tab tab-all-time" onclick="selectLeaderboard('all-time')">ALL TIME</a>
+				</div>
+				<div class="leaderboard-wrap"></div>
+			</div>
+		</div>
+	</div> -->

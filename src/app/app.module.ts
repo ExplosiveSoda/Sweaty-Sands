@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './container/header/header.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { DonateComponent } from './container/donate/donate.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DonateComponent } from './container/donate/donate.component';
     LeafletModule,
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
-    CollapseModule
+    CollapseModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
