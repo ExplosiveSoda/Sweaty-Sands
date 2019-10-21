@@ -10,6 +10,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './container/header/header.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { DonateComponent } from './container/donate/donate.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     ContainerComponent,
     SidenavComponent,
     MapComponent,
-    HeaderComponent
+    HeaderComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,

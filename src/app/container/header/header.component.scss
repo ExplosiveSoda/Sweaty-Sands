@@ -13,6 +13,22 @@
   z-index: 2;
 }
 
+.btn-group {
+  height: 3.5vh;
+}
+
+.btn-group .btn {
+  size: 40px;
+  font-weight: bold;
+  background: none;
+	color: rgba(255, 255, 255, 0.829);
+	border: none;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 4px;
+}
+
 img {
   height: 100%;
 }
