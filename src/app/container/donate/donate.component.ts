@@ -8,13 +8,15 @@ import { FormBuilder } from '@angular/forms';
 })
 export class DonateComponent implements OnInit {
   public currencies = ['AUD', 'BRL'];
+  public amount = 5;
 
   constructor(
     private formBuilder: FormBuilder,
   ) { }
 
   public form = this.formBuilder.group({
-    currency: [null]
+    currency: [null],
+    amount: []
   });
 
   ngOnInit() {
