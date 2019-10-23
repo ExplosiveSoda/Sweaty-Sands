@@ -7,7 +7,8 @@
                   <input class="donate-name-input" type="text" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="Your EPIC Name">
                   <input class="donate-link-input" type="text" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="Link to your Twitch, Youtube, etc. (optional)">
                   <div class="donate-price">
-                      <input formControlName="amount" class="donate-price-input" data-currency="USD" type="text" inputmode="numeric" pattern="[0-9]*" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="1.00" value="1.00">
+                      <input type="text" name="amount" class="donate-price-input" data-currency="USD" type="text" inputmode="numeric" pattern="[0-9]*" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="1.00" value="1.00">
+                      <!-- <input formControlName="amount" class="donate-price-input" data-currency="USD" type="text" inputmode="numeric" pattern="[0-9]*" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="1.00" value="1.00"> -->
                       <div class="donate-min">
                         <a onclick="minDonation()">Min. donation is $ 1.00</a>
                       </div>
@@ -56,15 +57,20 @@
                           <a onclick="selectCurrency('USD')">USD</a>
                         </div>
                   </div>
-                  <div>
+                  <!-- <div>
                     <label>
                       <input class="donate-public-input" type="checkbox" checked=""> Show my donation on this site.
                     </label>
-                  </div>
+                  </div> -->
                   <!-- <button class="btn">Pay with PayPal</button> -->
-                  <input type="hidden" name="cmd" value="_s-xclick" />
-                    <input type="hidden" name="hosted_button_id" value="WEV8GQKMH6FG8" />
-                    <input type="hidden" name="amount" value="{{amount}}">
+                  <input type="hidden" name="cmd" value="_donations" />
+                    <!-- <input type="hidden" name="hosted_button_id" value="WEV8GQKMH6FG8" /> -->
+                    <input type="hidden" name="business" value="RL8TUTXPW8JHU">
+                    <input type="hidden" name="item_name" value="Donation Description">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="tax" value="0">
+                    <!-- <label for="amount">Amount: </label><input type="text" name="amount" value="{{amount}}"> -->
+                    <!-- <input type="hidden" name="currency_code" value="{{currencies[0]}}"> -->
                     <input type="image" (click)="form.submit()" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                   <!-- <script src="https://www.paypal.com/sdk/js?client-id=AQ1RtPyS7_tyNNFnjdhiaNojVpzKk9Mir0NnrRueFLP-3VwzhhW1gbwHrXuukSizcRntT4YqyiZQjD6J"></script>

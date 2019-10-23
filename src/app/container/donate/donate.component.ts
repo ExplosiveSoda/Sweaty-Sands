@@ -7,7 +7,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./donate.component.scss']
 })
 export class DonateComponent implements OnInit {
-  public currencies = ['AUD', 'BRL'];
+  public currencies = ['USD', 'AUD', 'BRL'];
   public amount = 5;
 
   constructor(
