@@ -12,6 +12,7 @@ import { HeaderComponent } from './container/header/header.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { DonateComponent } from './container/donate/donate.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminContainerComponent } from './admin-container/admin-container.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SidenavComponent,
     MapComponent,
     HeaderComponent,
-    DonateComponent
+    DonateComponent,
+    AdminContainerComponent
   ],
   imports: [
     BrowserModule,

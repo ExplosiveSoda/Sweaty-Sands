@@ -1,0 +1,8 @@
+<div class="body">
+  <div class="card-body" *ngIf="host != 'localhost'">
+    <h1><span>You're not supposed to be here</span></h1>
+  </div>
+  <div *ngIf="host == 'localhost'">
+    <app-container></app-container>
+  </div>
+</div>

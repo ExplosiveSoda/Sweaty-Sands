@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public host: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.host = window.location.hostname;
   }
 
 }
