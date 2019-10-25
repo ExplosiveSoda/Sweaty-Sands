@@ -39,7 +39,7 @@ export const Other: ChallengeContainer[] = [
         description: 'Motorboats',
         locations: Motorboats,
         icon: {
-          image: '../../../assets/icons/Motorboat.png',
+          image: '../../../assets/icons/Motorboat2.png',
           size: [60, 60],
           anchor: [30, 30]
         },
@@ -51,7 +51,7 @@ export const Other: ChallengeContainer[] = [
         description: 'Weapon Upgrade Benches',
         locations: Workbench,
         icon: {
-          image: '../../../assets/icons/upgrademachine.png',
+          image: '../../../assets/icons/upgrademachine3.png',
           size: [60, 60],
           anchor: [30, 30]
         },

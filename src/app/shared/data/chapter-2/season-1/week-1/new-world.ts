@@ -61,7 +61,7 @@ export const NewWorld: ChallengeContainer = {
       description: 'Ride a motorboat in 3 different matches',
       locations: Motorboats,
       icon: {
-        image: '../../../assets/icons/Motorboat.png',
+        image: '../../../assets/icons/Motorboat3.png',
         size: [60, 60],
         anchor: [30, 30]
       },
