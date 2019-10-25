@@ -13,6 +13,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { DonateComponent } from './container/donate/donate.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminContainerComponent } from './admin-container/admin-container.component';
+import { TestContainerComponent } from './test-container/test-container.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AdminContainerComponent } from './admin-container/admin-container.compo
     MapComponent,
     HeaderComponent,
     DonateComponent,
-    AdminContainerComponent
+    AdminContainerComponent,
+    TestContainerComponent
   ],
   imports: [
     BrowserModule,

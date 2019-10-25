@@ -1,9 +1,9 @@
 <div class="body">
-  <div class="card-body" *ngIf="host != 'localhost'">
+  <div class="card-body" *ngIf="host != '10.87.144.128'">
     <h1><span>You're not supposed to be here</span> :)</h1>
     <h1>{{ host }}</h1>
   </div>
-  <div *ngIf="host == 'localhost'">
-    <app-container></app-container>
+  <div *ngIf="host == '10.87.144.128'">
+    <app-test-container></app-test-container>
   </div>
 </div>
