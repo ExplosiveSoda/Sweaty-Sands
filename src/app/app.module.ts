@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminContainerComponent } from './admin-container/admin-container.component';
 import { TestContainerComponent } from './test-container/test-container.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     CollapseModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

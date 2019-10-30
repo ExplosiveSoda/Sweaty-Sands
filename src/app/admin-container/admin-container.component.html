@@ -1,8 +1,19 @@
 <div class="body">
-  <div class="card-body" *ngIf="!hasAuth">
-    <h1><span>You're not supposed to be here</span> :)</h1>
-  </div>
-  <div *ngIf="hasAuth">
-    <app-test-container></app-test-container>
-  </div>
+  <ngx-spinner
+    bdColor="rgba(65,44,62, .3)"
+    size="medium"
+    color="#fff"
+    type="ball-beat"
+    [fullScreen]="true"
+  >
+    <p style="color: white">Loading...</p>
+  </ngx-spinner>
+  <ng-container *ngIf="hasAuth">
+    <div class="card-body" *ngIf="!hasAuth && !isLoading">
+      <h1><span>You're not supposed to be here</span> :)</h1>
+    </div>
+    <div *ngIf="hasAuth && !isLoading">
+      <app-test-container></app-test-container>
+    </div>
+  </ng-container>
 </div>
