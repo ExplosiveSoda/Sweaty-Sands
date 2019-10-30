@@ -1,8 +1,6 @@
 <div class="body">
   <div class="card-body" *ngIf="!hasAuth">
     <h1><span>You're not supposed to be here</span> :)</h1>
-    <h1>Host: {{ host }}</h1>
-    <h1>IP: {{ ipAddress }}</h1>
   </div>
   <div *ngIf="hasAuth">
     <app-test-container></app-test-container>
