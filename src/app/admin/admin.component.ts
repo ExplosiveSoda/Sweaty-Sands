@@ -5,11 +5,11 @@ import { finalize, delay } from 'rxjs/operators';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
-  selector: 'app-admin-container',
-  templateUrl: './admin-container.component.html',
-  styleUrls: ['./admin-container.component.scss']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class AdminContainerComponent implements OnInit {
+export class AdminComponent implements OnInit {
   public hasAuth: boolean;
   public isLoading = true;
 

@@ -1,0 +1,28 @@
+img {
+  object-fit: contain;
+  display:block;
+  margin:auto;
+}
+
+.map {
+  height: 100%;
+  padding: 0;
+}
+
+#leafletmap {
+  height: 97vh;
+  background-color: #412c3e;
+  z-index: 1;
+}
+
+.btn {
+  background-color: #74da55;
+  border: none;
+  font-size: 16px;
+  z-index: 2;
+  margin-top: 1vh;
+}
+
+.btn:hover {
+  background-color: #f4f4f4;
+}

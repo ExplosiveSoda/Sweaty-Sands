@@ -12,10 +12,12 @@ import { HeaderComponent } from './container/header/header.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { DonateComponent } from './container/donate/donate.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AdminContainerComponent } from './admin-container/admin-container.component';
-import { TestContainerComponent } from './test-container/test-container.component';
+import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { AdminSidenavComponent } from './admin/admin-container/admin-sidenav/admin-sidenav.component';
+import { AdminMapComponent } from './admin/admin-container/admin-map/admin-map.component';
+import { AdminContainerComponent } from './admin/admin-container/admin-container.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MapComponent,
     HeaderComponent,
     DonateComponent,
-    AdminContainerComponent,
-    TestContainerComponent
+    AdminComponent,
+    AdminSidenavComponent,
+    AdminMapComponent,
+    AdminComponent,
+    AdminContainerComponent
   ],
   imports: [
     BrowserModule,
