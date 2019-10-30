@@ -175,6 +175,9 @@ ngx-bootstrap/collapse
 
 ngx-bootstrap/datepicker
 
+ngx-spinner
+MIT
+
 regenerator-runtime
 MIT
 MIT License
