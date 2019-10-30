@@ -14,6 +14,7 @@ import { DonateComponent } from './container/donate/donate.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminContainerComponent } from './admin-container/admin-container.component';
 import { TestContainerComponent } from './test-container/test-container.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TestContainerComponent } from './test-container/test-container.componen
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
     CollapseModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

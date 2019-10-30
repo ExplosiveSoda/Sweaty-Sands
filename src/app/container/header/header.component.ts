@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../../shared/services/authentication.service';
+import { IpService } from '../../shared/services/ip.service';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public host: string;
+  public hasAuth: boolean;
 
-  constructor() { }
+  constructor(
+    private authService: AuthenticationService,
+    private ipService: IpService
+  ) { }
 
   ngOnInit() {
-    this.host = window.location.hostname;
+    this.ipService.getIP().subscribe(data => {
+      this.hasAuth = this.authService.getAuthentication(data.ip);
+    });
   }
 
 }
