@@ -14,19 +14,21 @@ export class AdminComponent implements OnInit {
   public isLoading = true;
 
   constructor(
-    private authService: AuthenticationService,
-    private ipService: IpService,
+    // private authService: AuthenticationService,
+    // private ipService: IpService,
     private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit() {
-    this.spinner.show();
-    this.ipService.getIP()
-    .pipe(delay(300), finalize(() => this.isLoading = false))
-    .subscribe(data => {
-      this.hasAuth = this.authService.getAuthentication(data.ip);
-      this.spinner.hide();
-    });
+    this.hasAuth = true;
+    this.isLoading = false;
+    // this.spinner.show();
+    // this.ipService.getIP()
+    // .pipe(delay(300), finalize(() => this.isLoading = false))
+    // .subscribe(data => {
+    //   this.hasAuth = this.authService.getAuthentication(data.ip);
+    //   this.spinner.hide();
+    // });
   }
 
 }

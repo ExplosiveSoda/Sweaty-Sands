@@ -11,14 +11,15 @@ export class HeaderComponent implements OnInit {
   public hasAuth: boolean;
 
   constructor(
-    private authService: AuthenticationService,
-    private ipService: IpService
+    // private authService: AuthenticationService,
+    // private ipService: IpService
   ) { }
 
   ngOnInit() {
-    this.ipService.getIP().subscribe(data => {
-      this.hasAuth = this.authService.getAuthentication(data.ip);
-    });
+    // this.ipService.getIP().subscribe(data => {
+    //   this.hasAuth = this.authService.getAuthentication(data.ip);
+    // });
+    this.hasAuth = true;
   }
 
 }
