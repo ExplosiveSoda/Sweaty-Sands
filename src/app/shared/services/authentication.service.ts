@@ -7,7 +7,7 @@ import { IpService } from './ip.service';
 export class AuthenticationService {
   private host: string;
   private safeHost = '10.87.144.128';
-  private safeIPs = ['', '161.7.106.189'];
+  private safeIPs = ['2600:6c67:6080:2b7f:e90c:bb09:5103:779b', '161.7.106.189'];
   constructor(
     private ipService: IpService
   ) { }
