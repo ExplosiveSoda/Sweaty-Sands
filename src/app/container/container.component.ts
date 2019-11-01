@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ChallengeContainer } from '../shared/interfaces/challenge-container';
 import { Season1 } from '../shared/data/chapter-2/season-1/season-1';
 import { Other } from '../shared/data/chapter-2/season-1/other';
+import { Ltms } from '../shared/data/chapter-2/season-1/ltms';
 import { POI } from 'src/app/shared/data/chapter-2/poi';
 import * as L from 'leaflet';
+import { LtmChallengeContainer } from '../shared/interfaces/ltm-challenge-container';
 
 @Component({
   selector: 'app-container',
@@ -14,6 +16,7 @@ export class ContainerComponent implements OnInit {
   public sidenavToggle = false;
   public challenges: ChallengeContainer[] = Season1;
   public other: ChallengeContainer[] = Other;
+  public ltms: LtmChallengeContainer[] = Ltms;
 
   public pois = POI;
   public tempWidth: number;

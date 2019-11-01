@@ -1,18 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ChallengeContainer } from 'src/app/shared/interfaces/challenge-container';
 import { Challenge } from 'src/app/shared/interfaces/challenge';
 import * as L from 'leaflet';
 import { LtmChallengeContainer } from 'src/app/shared/interfaces/ltm-challenge-container';
 
 @Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  selector: 'app-ltms',
+  templateUrl: './ltms.component.html',
+  styleUrls: ['./ltms.component.scss']
 })
-export class SidenavComponent implements OnInit {
-  @Input() sidenavToggle: boolean;
-  @Input() challenges: ChallengeContainer[];
-  @Input() other: ChallengeContainer[];
+export class LtmsComponent implements OnInit {
   @Input() ltms: LtmChallengeContainer[];
   @Input() map: L.Map;
   public isCollapsed = true;
@@ -21,9 +18,7 @@ export class SidenavComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    // this.toggle();
-  }
+  ngOnInit() {}
 
   collapse(item: any) {
     item.isCollapsed = !item.isCollapsed;
@@ -32,16 +27,6 @@ export class SidenavComponent implements OnInit {
   stopPropagation(event: Event, item: any) {
     event.stopPropagation();
     item.isCollapsed = !item.isCollapsed;
-  }
-
-  stop2(event: Event, item: any) {
-    event.stopPropagation();
-  }
-
-  toggle() {
-    if (this.sidenavToggle === false) {
-      document.getElementById('sidenav').style.width = '0';
-    }
   }
 
   toggleWeekChallenges(event: any, week: ChallengeContainer) {
@@ -99,9 +84,12 @@ export class SidenavComponent implements OnInit {
         iconSize: challenge.icon.size,
         iconAnchor: challenge.icon.anchor
       });
-      this.markers[challenge.id + '-' + location.name] = L.marker(location.location, {
-        icon: iconConst
-      }).addTo(this.map);
+      this.markers[challenge.id + '-' + location.name] = L.marker(
+        location.location,
+        {
+          icon: iconConst
+        }
+      ).addTo(this.map);
     });
   }
 
@@ -109,5 +97,16 @@ export class SidenavComponent implements OnInit {
     challenge.locations.forEach(location => {
       this.map.removeLayer(this.markers[challenge.id + '-' + location.name]);
     });
+  }
+
+  convertMS(ms: number) {
+    const days = Math.floor(ms / (24 * 60 * 60 * 1000));
+    const daysms = ms % (24 * 60 * 60 * 1000);
+    const hours = Math.floor(daysms / (60 * 60 * 1000));
+    const hoursms = ms % (60 * 60 * 1000);
+    const minutes = Math.floor(hoursms / (60 * 1000));
+    const minutesms = ms % (60 * 1000);
+    // const sec = Math.floor(minutesms / 1000);
+    return days + 'D ' + hours + 'H ' + minutes + 'M';
   }
 }

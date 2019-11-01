@@ -18,6 +18,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { AdminSidenavComponent } from './admin/admin-container/admin-sidenav/admin-sidenav.component';
 import { AdminMapComponent } from './admin/admin-container/admin-map/admin-map.component';
 import { AdminContainerComponent } from './admin/admin-container/admin-container.component';
+import { LtmsComponent } from './container/sidenav/ltms/ltms.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdminContainerComponent } from './admin/admin-container/admin-container
     AdminSidenavComponent,
     AdminMapComponent,
     AdminComponent,
-    AdminContainerComponent
+    AdminContainerComponent,
+    LtmsComponent
   ],
   imports: [
     BrowserModule,

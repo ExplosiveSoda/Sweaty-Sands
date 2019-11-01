@@ -1,0 +1,20 @@
+<ul class="list-group" *ngFor="let item of ltms">
+  <li class="list-group-item list-group-item-dark hover" (click)="collapse(item)" *ngIf="item.isActive">
+    <input type="checkbox" id="{{item.id}}-{{item.title}}" [checked]="item.isChecked" (change)="toggleWeekChallenges($event, item)"
+      (click)="stopPropagation($event, item)" /><label for="{{item.id}}-{{item.title}}">Toggle</label> {{ item.title }}
+      <b class="badge">⏱️ {{ convertMS(item.timeLeft) }}</b>
+    <span aria-hidden="true" class="fa hover" aria-label="Collapse" [attr.aria-expanded]="!item.isCollapsed"
+      [ngClass]="{
+            'fa-angle-right': item.isCollapsed,
+            'fa-angle-down': !item.isCollapsed
+          }"></span>
+    <ul class="list-group list-group-flush noHover" *ngFor="let challenges of item.challenges"
+      [collapse]="item.isCollapsed" (click)="$event.stopPropagation()">
+      <li class="list-group-item" *ngIf="challenges.isActive">
+        <input type="checkbox" id="{{challenges.id}}-{{challenges.description}}" [checked]="challenges.isChecked"
+          (change)="challenges.isChecked = !challenges.isChecked; updateWeekCheck(challenges, item, $event)" /><label
+          for="{{challenges.id}}-{{challenges.description}}">Toggle</label> {{ challenges.description }}
+      </li>
+    </ul>
+  </li>
+</ul>

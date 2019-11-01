@@ -18,6 +18,7 @@
       </ul>
     </li>
   </ul>
+  <app-ltms [ltms]="ltms" [map]="map"></app-ltms>
   <ul class="list-group" *ngFor="let item of challenges">
     <li class="list-group-item list-group-item-dark hover" (click)="collapse(item)" *ngIf="item.isActive">
       <input type="checkbox" id="{{item.id}}" [checked]="item.isChecked" (change)="toggleWeekChallenges($event, item)"
