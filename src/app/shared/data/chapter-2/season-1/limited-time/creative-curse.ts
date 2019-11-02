@@ -7,7 +7,7 @@ export const CreativeCurse: LtmChallengeContainer = {
   isCollapsed: true,
   isChecked: false,
   isActive: true,
-  timeLeft: (new Date(2019, 0O12, 0O4, 15).valueOf() - new Date().valueOf()),
+  timeLeft: (new Date(2019, 0O12, 0O4, 14).valueOf() - new Date().valueOf()),
   challenges: [
     {
       id: 1000,
