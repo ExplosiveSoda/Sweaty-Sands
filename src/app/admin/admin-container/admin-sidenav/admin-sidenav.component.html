@@ -1,5 +1,46 @@
 <div class="sidenav" id="sidenav">
-  <ul class="list-group" *ngFor="let item of other">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-dark hover">
+      <input
+        type="checkbox"
+        id="clickToggle"
+        [checked]="clickToggle"
+        (change)="toggleClicked($event)"
+      /><label for="clickToggle">Toggle</label>
+    </li>
+  </ul>
+
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-dark hover">
+      [
+      <div *ngFor="let item of clickList;  let isLast=last">
+          {{ '{' }} name: '', location: [ {{ item }} ] {{ '}' }}{{ isLast ? '' : ', ' }}
+      </div>
+      ]
+    </li>
+    <!-- [
+      {
+        name: 'Motorboat 1',
+        location: [27044, 7296]
+      }
+      ] -->
+  </ul>
+
+  <!-- <ul class="list-group">
+    <li class="list-group-item list-group-item-dark hover">
+      {{ clickValue }}
+    </li>
+    <li class="list-group-item list-group-item-dark hover" *ngIf="clickValue">
+      [
+      "{{ '{' }}"
+        name: '',
+        location: [ {{ clickValue }} ]
+      "{{ '}' }}",
+      ]
+    </li>
+  </ul> -->
+
+  <!-- <ul class="list-group" *ngFor="let item of other">
     <li
       class="list-group-item list-group-item-dark hover"
       (click)="collapse(item)"
@@ -91,5 +132,5 @@
         </li>
       </ul>
     </li>
-  </ul>
+  </ul> -->
 </div>

@@ -15,6 +15,9 @@ export class AdminSidenavComponent implements OnInit {
   @Input() challenges: ChallengeContainer[];
   @Input() other: ChallengeContainer[];
   @Input() map: L.Map;
+  @Input() clickToggle: boolean;
+  @Input() clickValue: string;
+  @Input() clickList: string[];
   public isCollapsed = true;
   public markers = {};
   events = [];
@@ -27,6 +30,14 @@ export class AdminSidenavComponent implements OnInit {
 
   collapse(item: any) {
     item.isCollapsed = !item.isCollapsed;
+  }
+
+  toggleClicked(event: any) {
+    if (event.currentTarget.checked === true) {
+      this.clickToggle = true;
+    } else {
+      this.clickToggle = false;
+    }
   }
 
   stopPropagation(event: Event, item: any) {

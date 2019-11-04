@@ -4,6 +4,7 @@ import { Season1 } from '../../shared/data/chapter-2/season-1/season-1';
 import { Other } from '../../shared/data/chapter-2/season-1/other';
 import { POI } from 'src/app/shared/data/chapter-2/poi';
 import * as L from 'leaflet';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-admin-container',
@@ -21,11 +22,23 @@ export class AdminContainerComponent implements OnInit {
 
   public map: L.Map;
 
+  public clickToggle: boolean;
+  public clickValue: string;
+  public clickList: string[] = [];
+
   constructor() { }
 
   ngOnInit() {
     const x = this.sidenavToggle;
     this.makeMap();
+  }
+  mapClick(e) {
+    // if (this.clickToggle === true) {
+      this.tempWidth = e.latlng.lat;
+      this.tempHeight = e.latlng.lng;
+      this.clickValue = Math.round(this.tempWidth) + ', ' + this.tempHeight;
+      this.clickList.push(this.clickValue);
+    // }
   }
 
   makeMap() {
@@ -39,12 +52,8 @@ export class AdminContainerComponent implements OnInit {
     const bounds = L.latLngBounds([[0, 0], [4096, 4096]]);
     const image = L.imageOverlay('../../../assets/images/chapter-2-map.png', bounds).addTo(this.map);
     this.map.fitBounds(bounds);
-    this.map.on('click', function(ev: any) {
-      this.tempWidth = ev.latlng.lat;
-      this.tempHeight = ev.latlng.lng;
-      // alert (
-      //     'width:' + this.tempWidth + '\n' + 'height:' + this.tempHeight + '\n'
-      // );
+    this.map.on('click', (e) => {
+      this.mapClick(e);
     });
     this.map.addControl(
       L.control.attribution({

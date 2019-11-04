@@ -19,6 +19,7 @@ import { AdminSidenavComponent } from './admin/admin-container/admin-sidenav/adm
 import { AdminMapComponent } from './admin/admin-container/admin-map/admin-map.component';
 import { AdminContainerComponent } from './admin/admin-container/admin-container.component';
 import { LtmsComponent } from './container/sidenav/ltms/ltms.component';
+import { InputModalComponent } from './ui/input-modal/input-modal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LtmsComponent } from './container/sidenav/ltms/ltms.component';
     AdminMapComponent,
     AdminComponent,
     AdminContainerComponent,
-    LtmsComponent
+    LtmsComponent,
+    InputModalComponent
   ],
   imports: [
     BrowserModule,

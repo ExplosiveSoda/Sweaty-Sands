@@ -1,6 +1,15 @@
 <div class="sidenav" id="sidenav">
-  <app-admin-sidenav [sidenavToggle]="sidenavToggle" [challenges]="challenges" [other]="other" [map]="map"></app-admin-sidenav>
+  <app-admin-sidenav
+    [sidenavToggle]="sidenavToggle"
+    [clickToggle]="clickToggle"
+    [clickValue]="clickValue"
+    [clickList]="clickList"
+    [challenges]="challenges"
+    [other]="other"
+    [map]="map"
+  ></app-admin-sidenav>
 </div>
 <div class="main" id="main">
-<app-admin-map [sidenavToggle]="sidenavToggle"></app-admin-map>
+  <app-admin-map [sidenavToggle]="sidenavToggle"></app-admin-map>
 </div>
+
