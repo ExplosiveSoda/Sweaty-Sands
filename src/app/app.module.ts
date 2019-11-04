@@ -20,6 +20,8 @@ import { AdminMapComponent } from './admin/admin-container/admin-map/admin-map.c
 import { AdminContainerComponent } from './admin/admin-container/admin-container.component';
 import { LtmsComponent } from './container/sidenav/ltms/ltms.component';
 import { InputModalComponent } from './ui/input-modal/input-modal.component';
+import { BsModalRef, ModalModule } from 'ngx-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,9 +48,14 @@ import { InputModalComponent } from './ui/input-modal/input-modal.component';
     CollapseModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ModalModule.forRoot(),
+    FormsModule
   ],
-  providers: [],
+  entryComponents: [
+    InputModalComponent
+  ],
+  providers: [BsModalRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

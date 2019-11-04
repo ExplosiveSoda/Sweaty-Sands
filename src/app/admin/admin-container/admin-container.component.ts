@@ -5,6 +5,9 @@ import { Other } from '../../shared/data/chapter-2/season-1/other';
 import { POI } from 'src/app/shared/data/chapter-2/poi';
 import * as L from 'leaflet';
 import { Subject } from 'rxjs';
+import { BsModalService } from 'ngx-bootstrap';
+import { InputModalComponent } from 'src/app/ui/input-modal/input-modal.component';
+import { PoiLocations } from 'src/app/shared/interfaces/poi-locations';
 
 @Component({
   selector: 'app-admin-container',
@@ -23,10 +26,12 @@ export class AdminContainerComponent implements OnInit {
   public map: L.Map;
 
   public clickToggle: boolean;
-  public clickValue: string;
-  public clickList: string[] = [];
+  public clickValue: PoiLocations = {name, location};
+  public clickList: PoiLocations[] = [];
 
-  constructor() { }
+  constructor(
+    private modalService: BsModalService
+  ) { }
 
   ngOnInit() {
     const x = this.sidenavToggle;
@@ -34,12 +39,31 @@ export class AdminContainerComponent implements OnInit {
   }
   mapClick(e) {
     // if (this.clickToggle === true) {
+      const temp = this.modalService.show(InputModalComponent);
+      temp.content.title = 'Input Name of Location';
+      temp.content.body = '';
+      temp.content.modalRef = temp;
       this.tempWidth = e.latlng.lat;
       this.tempHeight = e.latlng.lng;
-      this.clickValue = Math.round(this.tempWidth) + ', ' + this.tempHeight;
-      this.clickList.push(this.clickValue);
+      temp.content.clickValue = {name: '', location: ''};
+      temp.content.clickValue.location = Math.round(this.tempWidth) + ', ' + this.tempHeight;
+      temp.content.clickList = this.clickList;
+      // this.clickValue = temp.content.body + Math.round(this.tempWidth) + ', ' + this.tempHeight;
+      // this.clickList.push(this.clickValue);
     // }
   }
+
+  // openDeleteModal(building: BuildingGroupBuilding) {
+  //   const temp = this.modalService.show(InputModalComponent);
+  //   temp.componentInstance.title = 'Remove building';
+  //   temp.componentInstance.body = `Are you sure you want to remove ${building.name} from ${this.currentGroup.name}?`;
+  //   temp.result.then(result => {
+  //     if (result === confirm) {
+  //       this.deleteBuildingFromGroup(this.currentGroup.id, building.id);
+  //       this.buildings.splice(this.buildings.indexOf(building), 1);
+  //     }
+  //   });
+  // }
 
   makeMap() {
     this.map = L.map('leafletmap', {

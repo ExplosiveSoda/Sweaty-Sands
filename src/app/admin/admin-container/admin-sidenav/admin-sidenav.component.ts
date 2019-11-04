@@ -4,6 +4,7 @@ import { SeasonX } from 'src/app/shared/data/season-x/season-x';
 import { Challenge } from 'src/app/shared/interfaces/challenge';
 import { Other } from 'src/app/shared/data/Season-X/other';
 import * as L from 'leaflet';
+import { PoiLocations } from 'src/app/shared/interfaces/poi-locations';
 
 @Component({
   selector: 'app-admin-sidenav',
@@ -16,8 +17,8 @@ export class AdminSidenavComponent implements OnInit {
   @Input() other: ChallengeContainer[];
   @Input() map: L.Map;
   @Input() clickToggle: boolean;
-  @Input() clickValue: string;
-  @Input() clickList: string[];
+  @Input() clickValue: PoiLocations = {name: '', location: ''};
+  @Input() clickList: PoiLocations[];
   public isCollapsed = true;
   public markers = {};
   events = [];

@@ -14,7 +14,7 @@
     <li class="list-group-item list-group-item-dark hover">
       [
       <div *ngFor="let item of clickList;  let isLast=last">
-          {{ '{' }} name: '', location: [ {{ item }} ] {{ '}' }}{{ isLast ? '' : ', ' }}
+          {{ '{' }} name: '{{ item.name }}', location: [ {{ item.location }} ] {{ '}' }}{{ isLast ? '' : ', ' }}
       </div>
       ]
     </li>

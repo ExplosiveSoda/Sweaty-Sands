@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { PoiLocations } from 'src/app/shared/interfaces/poi-locations';
 
 @Component({
   selector: 'app-input-modal',
@@ -8,18 +10,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InputModalComponent implements OnInit {
   @Input() title: string;
   @Input() body: string;
+  @Input() modalRef: BsModalRef;
+  @Input() clickList: PoiLocations[];
+  @Input() clickValue: PoiLocations;
   constructor(
-    // public activeModal: ngba
+    public modalService: BsModalService
   ) { }
 
   ngOnInit() {
   }
 
   close() {
-    // this.activeModal.close();
-  }
-
-  closeConfirmation() {
-    // this.activeModal.close(confirm);
+    this.clickValue.name = this.body;
+    this.clickList.push(this.clickValue);
+    this.modalRef.hide();
   }
 }
