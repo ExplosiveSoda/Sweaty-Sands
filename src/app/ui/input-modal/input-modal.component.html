@@ -11,7 +11,7 @@
 </div>
 <div class="modal-body">
   <div class="form-group">
-    <input class="form-control" value="{{body}}" [(ngModel)]="body" />
+    <input class="form-control" value="{{body}}" [(ngModel)]="body" (keyup.enter)="close()" />
   </div>
 </div>
 <div class="modal-footer">
