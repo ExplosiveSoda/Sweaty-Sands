@@ -1,4 +1,7 @@
 <div class="sidenav" id="sidenav">
+  <div class="form-group">
+      <button type="button" class="btn btn-dark btn-lg btn-block" (click)="openSettingsModal()">Settings</button>
+  </div>
   <ul class="list-group">
     <li class="list-group-item list-group-item-dark hover">
       <input
@@ -7,130 +10,14 @@
         [checked]="clickToggle"
         (change)="toggleClicked($event)"
       /><label for="clickToggle">Toggle</label>
+      Enable Clicking
     </li>
-  </ul>
-
-  <ul class="list-group">
-    <li class="list-group-item list-group-item-dark hover">
+    <li class="list-group-item list-group-item-dark hover" *ngIf="clickList.length > 0">
       [
       <div *ngFor="let item of clickList;  let isLast=last">
           {{ '{' }} name: '{{ item.name }}', location: [ {{ item.location }} ] {{ '}' }}{{ isLast ? '' : ', ' }}
       </div>
       ]
     </li>
-    <!-- [
-      {
-        name: 'Motorboat 1',
-        location: [27044, 7296]
-      }
-      ] -->
   </ul>
-
-  <!-- <ul class="list-group">
-    <li class="list-group-item list-group-item-dark hover">
-      {{ clickValue }}
-    </li>
-    <li class="list-group-item list-group-item-dark hover" *ngIf="clickValue">
-      [
-      "{{ '{' }}"
-        name: '',
-        location: [ {{ clickValue }} ]
-      "{{ '}' }}",
-      ]
-    </li>
-  </ul> -->
-
-  <!-- <ul class="list-group" *ngFor="let item of other">
-    <li
-      class="list-group-item list-group-item-dark hover"
-      (click)="collapse(item)"
-      *ngIf="item.isActive"
-    >
-      <input
-        type="checkbox"
-        id="{{ item.id }}-{{ item.title }}"
-        [checked]="item.isChecked"
-        (change)="toggleWeekChallenges($event, item)"
-        (click)="stopPropagation($event, item)"
-      /><label for="{{ item.id }}-{{ item.title }}">Toggle</label>
-      {{ item.title }}
-      <span
-        aria-hidden="true"
-        class="fa hover"
-        aria-label="Collapse"
-        [attr.aria-expanded]="!item.isCollapsed"
-        [ngClass]="{
-          'fa-angle-right': item.isCollapsed,
-          'fa-angle-down': !item.isCollapsed
-        }"
-      ></span>
-      <ul
-        class="list-group list-group-flush noHover"
-        *ngFor="let challenges of item.challenges"
-        [collapse]="item.isCollapsed"
-        (click)="$event.stopPropagation()"
-      >
-        <li class="list-group-item" *ngIf="challenges.isActive">
-          <input
-            type="checkbox"
-            id="{{ challenges.id }}-{{ challenges.description }}"
-            [checked]="challenges.isChecked"
-            (change)="
-              challenges.isChecked = !challenges.isChecked;
-              updateWeekCheck(challenges, item, $event)
-            "
-          /><label for="{{ challenges.id }}-{{ challenges.description }}"
-            >Toggle</label
-          >
-          {{ challenges.description }}
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <ul class="list-group" *ngFor="let item of challenges">
-    <li
-      class="list-group-item list-group-item-dark hover"
-      (click)="collapse(item)"
-      *ngIf="item.isActive"
-    >
-      <input
-        type="checkbox"
-        id="{{ item.id }}"
-        [checked]="item.isChecked"
-        (change)="toggleWeekChallenges($event, item)"
-        (click)="stopPropagation($event, item)"
-      /><label for="{{ item.id }}">Toggle</label> {{ item.title }}
-      <span
-        aria-hidden="true"
-        class="fa hover"
-        aria-label="Collapse"
-        [attr.aria-expanded]="!item.isCollapsed"
-        [ngClass]="{
-          'fa-angle-right': item.isCollapsed,
-          'fa-angle-down': !item.isCollapsed
-        }"
-      ></span>
-      <ul
-        class="list-group list-group-flush noHover"
-        *ngFor="let challenges of item.challenges"
-        [collapse]="item.isCollapsed"
-        (click)="$event.stopPropagation()"
-      >
-        <li class="list-group-item" *ngIf="challenges.isActive">
-          <input
-            type="checkbox"
-            id="{{ challenges.id }}-{{ challenges.description }}"
-            [checked]="challenges.isChecked"
-            (change)="
-              challenges.isChecked = !challenges.isChecked;
-              updateWeekCheck(challenges, item, $event)
-            "
-          /><label for="{{ challenges.id }}-{{ challenges.description }}"
-            >Toggle</label
-          >
-          {{ challenges.description }}
-        </li>
-      </ul>
-    </li>
-  </ul> -->
 </div>

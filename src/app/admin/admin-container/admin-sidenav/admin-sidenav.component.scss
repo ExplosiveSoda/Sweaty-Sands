@@ -122,3 +122,13 @@ span {
 .noHover {
   cursor: default;
 }
+
+.btn-dark {
+  background-color: #251a24;
+  border-color: #0e0a0d;
+}
+
+.btn-dark:hover {
+  background-color: #140e14;
+  border-color: #0e0a0d;
+}

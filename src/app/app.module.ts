@@ -22,6 +22,8 @@ import { LtmsComponent } from './container/sidenav/ltms/ltms.component';
 import { InputModalComponent } from './ui/input-modal/input-modal.component';
 import { BsModalRef, ModalModule } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { SettingsModalComponent } from './ui/settings-modal/settings-modal.component';
+import { NameLocationComponent } from './ui/name-location/name-location.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { FormsModule } from '@angular/forms';
     AdminComponent,
     AdminContainerComponent,
     LtmsComponent,
-    InputModalComponent
+    InputModalComponent,
+    SettingsModalComponent,
+    NameLocationComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   entryComponents: [
-    InputModalComponent
+    InputModalComponent,
+    SettingsModalComponent
   ],
   providers: [BsModalRef],
   bootstrap: [AppComponent]

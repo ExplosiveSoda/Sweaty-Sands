@@ -5,6 +5,8 @@ import { Challenge } from 'src/app/shared/interfaces/challenge';
 import { Other } from 'src/app/shared/data/Season-X/other';
 import * as L from 'leaflet';
 import { PoiLocations } from 'src/app/shared/interfaces/poi-locations';
+import { BsModalService } from 'ngx-bootstrap';
+import { SettingsModalComponent } from 'src/app/ui/settings-modal/settings-modal.component';
 
 @Component({
   selector: 'app-admin-sidenav',
@@ -17,14 +19,16 @@ export class AdminSidenavComponent implements OnInit {
   @Input() other: ChallengeContainer[];
   @Input() map: L.Map;
   @Output() emit = new EventEmitter<boolean>();
-  @Input() clickValue: PoiLocations = {name: '', location: ''};
+  @Input() clickValue: PoiLocations = { name: '', location: '' };
   @Input() clickList: PoiLocations[];
   public clickToggle = false;
   public isCollapsed = true;
   public markers = {};
   events = [];
 
-  constructor() {}
+  constructor(
+    private modalService: BsModalService
+  ) { }
 
   ngOnInit() {
     // this.toggle();
@@ -116,5 +120,12 @@ export class AdminSidenavComponent implements OnInit {
     challenge.locations.forEach(location => {
       this.map.removeLayer(this.markers[challenge.id + '-' + location.name]);
     });
+  }
+
+  openSettingsModal() {
+    const temp = this.modalService.show(SettingsModalComponent, {class: 'modal-lg'});
+    temp.content.title = 'Settings';
+    temp.content.body = '';
+    temp.content.modalRef = temp;
   }
 }
