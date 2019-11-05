@@ -81,3 +81,8 @@ html, body {
 .modal-footer {
   border-top: 1px solid #a16e98 !important;
 }
+
+.form-control:focus {
+  border-color: #da99ce !important;
+  box-shadow: 0 0 0 0.2rem rgba(196,137,185, 0.35) !important;
+} 
