@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ChallengeContainer } from 'src/app/shared/interfaces/challenge-container';
 import { SeasonX } from 'src/app/shared/data/season-x/season-x';
 import { Challenge } from 'src/app/shared/interfaces/challenge';
@@ -16,9 +16,10 @@ export class AdminSidenavComponent implements OnInit {
   @Input() challenges: ChallengeContainer[];
   @Input() other: ChallengeContainer[];
   @Input() map: L.Map;
-  @Input() clickToggle: boolean;
+  @Output() emit = new EventEmitter<boolean>();
   @Input() clickValue: PoiLocations = {name: '', location: ''};
   @Input() clickList: PoiLocations[];
+  public clickToggle = false;
   public isCollapsed = true;
   public markers = {};
   events = [];
@@ -35,9 +36,9 @@ export class AdminSidenavComponent implements OnInit {
 
   toggleClicked(event: any) {
     if (event.currentTarget.checked === true) {
-      this.clickToggle = true;
+      this.emit.emit(true);
     } else {
-      this.clickToggle = false;
+      this.emit.emit(false);
     }
   }
 

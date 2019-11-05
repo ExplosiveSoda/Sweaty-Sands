@@ -25,7 +25,7 @@ export class AdminContainerComponent implements OnInit {
 
   public map: L.Map;
 
-  public clickToggle: boolean;
+  public clickToggle = false;
   public clickValue: PoiLocations = {name, location};
   public clickList: PoiLocations[] = [];
 
@@ -38,7 +38,7 @@ export class AdminContainerComponent implements OnInit {
     this.makeMap();
   }
   mapClick(e) {
-    // if (this.clickToggle === true) {
+    if (this.clickToggle === true) {
       const temp = this.modalService.show(InputModalComponent);
       temp.content.title = 'Input Name of Location';
       temp.content.body = '';
@@ -50,7 +50,11 @@ export class AdminContainerComponent implements OnInit {
       temp.content.clickList = this.clickList;
       // this.clickValue = temp.content.body + Math.round(this.tempWidth) + ', ' + this.tempHeight;
       // this.clickList.push(this.clickValue);
-    // }
+    }
+  }
+
+  clickToggleReceive(e) {
+    this.clickToggle = e;
   }
 
   // openDeleteModal(building: BuildingGroupBuilding) {

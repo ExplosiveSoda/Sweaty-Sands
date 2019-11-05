@@ -1,7 +1,7 @@
 <div class="sidenav" id="sidenav">
   <app-admin-sidenav
     [sidenavToggle]="sidenavToggle"
-    [clickToggle]="clickToggle"
+    (emit)="clickToggleReceive($event)"
     [clickValue]="clickValue"
     [clickList]="clickList"
     [challenges]="challenges"
