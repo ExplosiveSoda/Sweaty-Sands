@@ -1,5 +1,5 @@
 <ul class="list-group" *ngFor="let item of ltms">
-  <li class="list-group-item list-group-item-dark hover" (click)="collapse(item)" *ngIf="item.isActive">
+  <li class="list-group-item list-group-item-dark hover" (click)="collapse(item)" *ngIf="item.isActive && item.timeLeft > 0">
     <input type="checkbox" id="{{item.id}}-{{item.title}}" [checked]="item.isChecked" (change)="toggleWeekChallenges($event, item)"
       (click)="stopPropagation($event, item)" /><label for="{{item.id}}-{{item.title}}">Toggle</label> {{ item.title }}
       <b class="badge">⏱️ {{ convertMS(item.timeLeft) }}</b>
